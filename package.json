@@ -1,0 +1,19 @@
+{
+  "name": "css_utils",
+  "version": "0.0.1",
+  "description": "Utils for styling.",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whastings/css_utils.git"
+  },
+  "author": "Will Hastings",
+  "license": " ",
+  "bugs": {
+    "url": "https://github.com/whastings/css_utils/issues"
+  },
+  "homepage": "https://github.com/whastings/css_utils#readme"
+}
