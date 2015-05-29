@@ -1,0 +1,13 @@
+@function list-implode($list, $separator) {
+  $result: "";
+  $list-length: length($list);
+
+  @for $i from 1 through $list-length {
+    $result: $result + nth($list, $i);
+    @if $i != $list-length {
+      $result: $result + $separator;
+    }
+  }
+
+  @return $result;
+}

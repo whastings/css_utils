@@ -1,0 +1,40 @@
+@import "../functions/lists";
+
+// Credit: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+@mixin border-box-inherit() {
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+}
+
+// Inspiration: http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+@mixin breakpoint($name, $bp-map: $breakpoints) {
+  $bp: map-get($bp-map, $name);
+  $conditions: ();
+
+  @each $type, $value in $bp {
+    $conditions: append($conditions, "(#{$type}: #{$value})");
+  }
+
+  @media #{list-implode($conditions, " and ")} {
+    @content;
+  }
+}
+
+// Borrowed from: https://css-tricks.com/snippets/sass/bem-mixins/
+@mixin el($el) {
+  &__#{$el} {
+    @content;
+  }
+}
+
+// Borrowed from: https://css-tricks.com/snippets/sass/bem-mixins/
+@mixin mod($mod) {
+  &--#{$mod} {
+    @content;
+  }
+}

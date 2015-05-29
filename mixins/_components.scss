@@ -1,0 +1,25 @@
+@mixin button(
+  $bg-color: #fff,
+  $color: #333,
+  $border: 1px,
+  $border-color: #333,
+  $border-radius: 5px,
+  $hover-bg-color: #333,
+  $hover-color: #fff,
+  $hover-border-color: #333
+) {
+  background-color: $bg-color;
+  border-color: $border-color;
+  border-style: solid;
+  border-radius: $border-radius;
+  border-width: $border;
+  color: $color;
+  padding: 3px 8px;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-color;
+    border-color: $hover-border-color;
+    color: $hover-color;
+  }
+}
