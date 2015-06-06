@@ -23,3 +23,27 @@
     color: $hover-color;
   }
 }
+
+@mixin input(
+  $border-color: #ccc,
+  $border-radius: 4px,
+  $is-block: true,
+  $outline-color: #66afe9
+) {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  margin-bottom: 10px;
+  outline-color: $outline-color;
+  outline-width: 1px;
+  padding: 8px 12px;
+
+  @if $is-block {
+    display: block;
+    width: 100%;
+  }
+
+  &:focus {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6)      ;
+  }
+}
