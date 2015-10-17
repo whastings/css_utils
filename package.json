@@ -1,6 +1,6 @@
 {
   "name": "@whastings/css_utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utils for styling.",
   "main": " ",
   "scripts": {
@@ -19,7 +19,7 @@
   "keywords": ["eyeglass-module"],
   "eyeglass": {
     "exports": "eyeglass-exports.js",
-    "name": "css_util",
+    "name": "css_utils",
     "needs": "^0.6.0"
   }
 }
